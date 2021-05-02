@@ -35,34 +35,41 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--dark-gray);
+    background-color: var(--white);
 }
 
 #sidebar {
-    transition-property: transform;
-    transition-timing-function: ease;
-    transition: all .2s ease-in-out;
-    z-index: 2;
-}
-
-#sidebar.active {
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: fixed;
     height: 100vh;
-    width: 70vw;
+    width: 75vw;
     overflow-y: auto;
+    transition-property: transform;
+    transition-timing-function: ease;
+    transform: translateX(-80vw);
+    transition: all .6s ease-in-out;
+    z-index: 2;
     background-color: var(--white);
+}
+
+#sidebar.active {
+    transform: translate3d(0px, 0px, 0px);
 }
 
 #main-content {
     grid-area: main;
+    border-top: 1px dashed gainsboro;
+    border-bottom: 1px dashed gainsboro;
 }
 
 #footer {
     grid-area: footer;
-    background-color: var(--dark-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
 }
 
 #overlay {
@@ -79,8 +86,7 @@ a {
     cursor: pointer;
 }
 
-
-.header-container {
+.flex-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,15 +95,20 @@ a {
 }
 
 .logo a {
-    color: var(--white);
+    color: var(--dark-gray);
 }
 
 .menu-button svg {
-    fill: var(--white);
+    fill: var(--dark-gray);
 }
 
 .menu-horizontal {
     display: none;
+}
+
+.menu-vertical {
+    display: flex;
+    flex-direction: column;
 }
 
 .nav-sidebar {
@@ -106,7 +117,18 @@ a {
     overflow-y: auto;
     z-index: 2;
     transform: translate3d(-75vw, -75vw, 0px);
-    background-color: var(--light-gray);
+    background-color: var(--dark-gray);
+}
+
+.menu-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-vertical a {
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
 }
 
 /* Non-mobile styles, 750px breakpoint */
@@ -127,7 +149,7 @@ a {
 
     .menu-horizontal ul > li > a {
         padding: 22px;
-        color: var(--white);
+        color: var(--dark-gray);
     }
 
     .menu-horizontal a:hover {
