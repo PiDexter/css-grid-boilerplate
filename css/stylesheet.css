@@ -1,1 +1,32 @@
 @import "normalize.css";
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr 50px;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    height: 100vh;
+}
+
+#header {
+    grid-area: header;
+}
+
+#sidebar {
+
+}
+
+#sidebar.active {
+
+}
+
+#main-content {
+    grid-area: main;
+}
+
+#footer {
+    grid-area: footer;
+}
