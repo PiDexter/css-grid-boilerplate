@@ -18,12 +18,14 @@
                 </a>
             </div>
 
-            <div class="menu-button">
-                <svg viewBox="0 0 100 80" width="30" height="20">
-                    <rect width="100" height="20" rx="8"></rect>
-                    <rect y="30" width="100" height="20" rx="8"></rect>
-                    <rect y="60" width="100" height="20" rx="8"></rect>
-                </svg>
+            <div id="burger-button" class="menu-button">
+                <div id="open-sidenav">
+                    <svg viewBox="0 0 100 80" width="30" height="20">
+                        <rect width="100" height="20" rx="8"></rect>
+                        <rect y="30" width="100" height="20" rx="8"></rect>
+                        <rect y="60" width="100" height="20" rx="8"></rect>
+                    </svg>
+                </div>
             </div>
 
             <nav class="menu-horizontal">
@@ -37,6 +39,7 @@
     </header>
 
     <aside id="sidebar">
+
     </aside>
 
     <main id="main-content">
@@ -45,6 +48,8 @@
     <footer id="footer">
     </footer>
 
+    <div id="overlay"></div>
 </div>
+<script src="js/sidenav.js"></script>
 </body>
 </html>
