@@ -1,4 +1,4 @@
-<h1>Mobile-first boilderplate with CSS-grid</h1>
+<h1>Mobile-first boilerplate with CSS-grid</h1>
 
 Basic web layout with mobile-first design built with CSS-grid and flexbox.
 
